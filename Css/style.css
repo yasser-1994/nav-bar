@@ -1,0 +1,69 @@
+/* ======= tha Global start ======== */
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+a{color: white;}
+#click{display: none;}
+/* ======= tha Global end ======== */
+
+/* --=====start navbar======-- */
+nav{
+   background-color: #050f2c;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   height: 80px;
+   position: relative;
+}
+nav .bar{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+nav .bar .list-item{ position: relative; margin-left: 30px;}
+nav .bar .list-item .link-item{font-size: 20px;}
+nav .bar .list-item .link-item:hover{color: gray;}
+label #btn, label #close{
+   position: absolute;
+   z-index: 1;
+   font-size: 25px;
+   color: white;
+   display: none;
+   top: 28px;
+   cursor: pointer;
+}
+/* --=====end navbar======-- */
+
+/* ====== srart Screen Media ====== */
+@media (max-width:991px){
+   nav .bar .list-item .link-item{text-transform: uppercase;}
+    nav .bar{  
+       display: block;
+       text-align: center;
+       position: fixed;
+       right: -60%;
+       top: 80px;
+       height: 100vh;
+       width: 60%;
+       background-color: #050f2c; 
+       padding: 25px 0;
+       transition: all 0.4s ease-in-out;
+       clip-path:  circle(100% at 130% 16%);
+    }
+    nav .bar .list-item{
+       margin: 30px 0;
+       width: 100%; 
+    } 
+    /* =====start checkbox====== */
+      label #btn{display: block;} 
+      #click:checked ~ .bar{right: 0;}
+      #click:checked ~ label #btn{display: none;}
+      #click:checked ~ label #close{display: block;}
+   /* =====end checkbox====== */
+}  
+/* ====== end Screen Media ====== */
